@@ -149,6 +149,7 @@ export VAULT_HELM_RELEASE=vault
 export VAULT_ROUTE=${VAULT_HELM_RELEASE}.apps.$BASE_DOMAIN
 export VAULT_ADDR=https://${VAULT_ROUTE}
 export VAULT_SERVICE=${VAULT_HELM_RELEASE}-active.hashicorp.svc
+export VAULT_SKIP_VERIFY=true
 
 cat <<EOF | oc apply -f-
 apiVersion: cert-manager.io/v1
